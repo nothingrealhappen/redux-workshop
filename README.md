@@ -155,3 +155,7 @@ class Counter extends Component {
 ```
 
 # what is dataStore
+# Further reading
+[redux official docs](https://redux.js.org/)
+
+[Redux author Dan Abramov egghead videos](https://egghead.io/instructors/dan-abramov)
