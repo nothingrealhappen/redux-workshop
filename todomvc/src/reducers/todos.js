@@ -1,3 +1,4 @@
+import uuid from 'uuid/v4';
 import {
   ADD_TODO,
   DELETE_TODO,
@@ -17,7 +18,12 @@ const initialState = [
 
 export default function todos(state = initialState, action) {
   switch (action.type) {
-    // add ADD & Delete reducer here
+    case ADD_TODO:
+        return state.concat([{ id: uuid(), text: action.text }]);
+
+    case DELETE_TODO:
+        return state.filter(todo => todo.id !== action.id);
+
     case EDIT_TODO:
       return state.map(todo =>
         todo.id === action.id ?

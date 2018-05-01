@@ -1,7 +1,7 @@
 import * as types from '../constants/ActionTypes'
 
 // add add& delete action here
-export const addTodo = (id, text) => ({ type: types.ADD_TODO, id, text })
+export const addTodo = text => ({ type: types.ADD_TODO, text })
 export const deleteTodo = (id, text) => ({ type: types.DELETE_TODO, id, text })
 export const editTodo = (id, text) => ({ type: types.EDIT_TODO, id, text })
 export const completeTodo = id => ({ type: types.COMPLETE_TODO, id })
